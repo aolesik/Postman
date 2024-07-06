@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "4b12e0f4-b04f-4291-9741-9521359bc993",
+		"name": "MoySklad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "35972545",
+		"_collection_link": "https://www.postman.com/test-team-4777/workspace/testworkspace/collection/35972545-4b12e0f4-b04f-4291-9741-9521359bc993?action=share&source=collection_link&creator=35972545"
+	},
+	"item": [
+		{
+			"name": "Add a new Bonus Program",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"bonusprogram\",\r\n    \"active\": true,\r\n    \"allProducts\": true,\r\n    \"allAgents\": false,\r\n    \"agentTags\": [],\r\n    \"earnRateRoublesToPoint\": 7,\r\n    \"spendRatePointsToRouble\": 4,\r\n    \"maxPaidRatePercents\": 50,\r\n    \"postponedBonusesDelayDays\": 7,\r\n    \"earnWhileRedeeming\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.moysklad.ru/api/remap/1.2/entity/bonusprogram"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bonus Programs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip"
+					}
+				],
+				"url": {
+					"raw": "https://api.moysklad.ru/api/remap/1.2/entity/bonusprogram?limit=10",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moysklad",
+						"ru"
+					],
+					"path": [
+						"api",
+						"remap",
+						"1.2",
+						"entity",
+						"bonusprogram"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change the Bonus Program",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"New Bonus Program \",\r\n    \"active\": true,\r\n    \"agentTags\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.moysklad.ru/api/remap/1.2/entity/bonusprogram/151bd45b-3bcf-11ef-0a80-0766006e6d94"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the Bonus Program",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip"
+					}
+				],
+				"url": {
+					"raw": "https://api.moysklad.ru/api/remap/1.2/entity/bonusprogram/151bd45b-3bcf-11ef-0a80-0766006e6d94?id=151bd45b-3bcf-11ef-0a80-0766006e6d94",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moysklad",
+						"ru"
+					],
+					"path": [
+						"api",
+						"remap",
+						"1.2",
+						"entity",
+						"bonusprogram",
+						"151bd45b-3bcf-11ef-0a80-0766006e6d94"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "151bd45b-3bcf-11ef-0a80-0766006e6d94"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new Item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Бананы\",\r\n    \"code\": \"one1\",\r\n    \"externalCode\": \"456\",\r\n    \"description\": \"Бананы, Африка\",\r\n    \"vat\": 18,\r\n    \"effectiveVat\": 18,\r\n    \"discountProhibited\": false,\r\n    \"uom\": {\r\n        \"meta\": {\r\n        \"href\": \"https://api.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10\",\r\n        \"metadataHref\": \"https://api.moysklad.ru/api/remap/1.2/entity/uom/metadata\",\r\n        \"type\": \"uom\",\r\n        \"mediaType\": \"application/json\"\r\n        }\r\n    }  \r\n}\r\n   \r\n        \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.moysklad.ru/api/remap/1.2/entity/product"
+			},
+			"response": []
+		},
+		{
+			"name": "Change an item",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Бананы-мини\",\r\n    \"code\": \"one1\",\r\n    \"externalCode\": \"456\",\r\n    \"description\": \"Бананы, Африка\",\r\n    \"vat\": 18,\r\n    \"effectiveVat\": 18,\r\n    \"discountProhibited\": false,\r\n    \"uom\": {\r\n        \"meta\": {\r\n        \"href\": \"https://api.moysklad.ru/api/remap/1.2/entity/uom/19f1edc0-fc42-4001-94cb-c9ec9c62ec10\",\r\n        \"metadataHref\": \"https://api.moysklad.ru/api/remap/1.2/entity/uom/metadata\",\r\n        \"type\": \"uom\",\r\n        \"mediaType\": \"application/json\"\r\n        }\r\n    }  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.moysklad.ru/api/remap/1.2/entity/product/521ff198-3bd2-11ef-0a80-0c80006bbac8"
+			},
+			"response": []
+		}
+	]
+}
