@@ -147,13 +147,11 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>",
-						"type": "text"
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>"
 					},
 					{
 						"key": "Accept-Encoding",
-						"value": " gzip",
-						"type": "text"
+						"value": " gzip"
 					}
 				],
 				"body": {
@@ -176,13 +174,11 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>",
-						"type": "text"
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>"
 					},
 					{
 						"key": "Accept-Encoding",
-						"value": " gzip",
-						"type": "text"
+						"value": " gzip"
 					}
 				],
 				"body": {
@@ -195,6 +191,148 @@
 					}
 				},
 				"url": "https://api.moysklad.ru/api/remap/1.2/entity/product/521ff198-3bd2-11ef-0a80-0c80006bbac8"
+			},
+			"response": []
+		},
+		{
+			"name": "Get company subscription",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip",
+						"type": "text"
+					}
+				],
+				"url": "https://api.moysklad.ru/api/remap/1.2/accountSettings/subscription"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a custom role",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"testRole\",\r\n  \"permissions\": {\r\n    \"importData\": false,\r\n    \"exportData\": false,\r\n    \"onlineShops\": false,\r\n    \"apiRequest\": false,\r\n    \"sendEmail\": false,\r\n    \"viewProductCostAndProfit\": false,\r\n    \"viewDashboard\": false,\r\n    \"viewRecycleBin\": false,\r\n    \"viewAudit\": false,\r\n    \"viewSaleProfit\": false,\r\n    \"viewCommissionGoods\": false,\r\n    \"viewPurchaseFunnel\": false,\r\n    \"viewStockReport\": false,\r\n    \"viewTurnover\": false,\r\n    \"viewSerialNumbers\": false,\r\n    \"viewCashFlow\": false,\r\n    \"viewCustomerBalanceList\": false,\r\n    \"viewProfitAndLoss\": false,\r\n    \"viewCompanyCRM\": false,\r\n    \"viewMoneyDashboard\": false,\r\n    \"restoreFromRecycleBin\": false,\r\n    \"deleteFromRecycleBin\": false,\r\n    \"editDocumentsOfRestrictedPeriod\": false,\r\n    \"editDocumentTemplates\": false,\r\n    \"editCurrencyRateOfDocument\": false,\r\n    \"subscriptionControl\": false,\r\n    \"purchaseControl\": false,\r\n    \"listenCalls\": false\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.moysklad.ru/api/remap/1.2/entity/role/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update custom role",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"updatedTestRole\",\r\n  \"permissions\": {\r\n    \"importData\": true,\r\n    \"exportData\": false,\r\n    \"onlineShops\": false,\r\n    \"apiRequest\": false,\r\n    \"sendEmail\": false,\r\n    \"viewProductCostAndProfit\": false,\r\n    \"viewDashboard\": false,\r\n    \"viewRecycleBin\": false,\r\n    \"viewAudit\": false,\r\n    \"viewSaleProfit\": false,\r\n    \"viewCommissionGoods\": false,\r\n    \"viewPurchaseFunnel\": false,\r\n    \"viewStockReport\": false,\r\n    \"viewTurnover\": false,\r\n    \"viewSerialNumbers\": false,\r\n    \"viewCashFlow\": false,\r\n    \"viewCustomerBalanceList\": false,\r\n    \"viewProfitAndLoss\": false,\r\n    \"viewCompanyCRM\": false,\r\n    \"viewMoneyDashboard\": false,\r\n    \"restoreFromRecycleBin\": false,\r\n    \"deleteFromRecycleBin\": false,\r\n    \"editDocumentsOfRestrictedPeriod\": false,\r\n    \"editDocumentTemplates\": false,\r\n    \"editCurrencyRateOfDocument\": false,\r\n    \"subscriptionControl\": false,\r\n    \"purchaseControl\": false,\r\n    \"listenCalls\": false\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.moysklad.ru/api/remap/1.2/entity/role/81c8bef5-3c76-11ef-0a80-009d008e2430?id=81c8bef5-3c76-11ef-0a80-009d008e2430",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moysklad",
+						"ru"
+					],
+					"path": [
+						"api",
+						"remap",
+						"1.2",
+						"entity",
+						"role",
+						"81c8bef5-3c76-11ef-0a80-009d008e2430"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "81c8bef5-3c76-11ef-0a80-009d008e2430"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a custom role",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Basic <YW5uYXdheTk4QGdtYWlsLmNvbTprb3JvMTF2YTEy>",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": " gzip",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.moysklad.ru/api/remap/1.2/entity/role/81c8bef5-3c76-11ef-0a80-009d008e2430?id=81c8bef5-3c76-11ef-0a80-009d008e2430",
+					"protocol": "https",
+					"host": [
+						"api",
+						"moysklad",
+						"ru"
+					],
+					"path": [
+						"api",
+						"remap",
+						"1.2",
+						"entity",
+						"role",
+						"81c8bef5-3c76-11ef-0a80-009d008e2430"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "81c8bef5-3c76-11ef-0a80-009d008e2430"
+						}
+					]
+				}
 			},
 			"response": []
 		}
